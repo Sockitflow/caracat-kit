@@ -1,15 +1,14 @@
 import React, { useMemo } from 'react';
 import { StyleSheet } from 'react-native';
 import { ShowcaseApp } from '@gorhom/showcase-template';
-import { screens as defaultScreens } from './screens';
 import { version, description } from '../../../package.json';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { rnktScreens as defaultScreens } from '../../app/src/screens';
 
 const author = {
   username: 'Mo Gorhom',
   url: 'https://gorhom.dev',
 };
-
 
 interface AppProps {
   screens?: any[];

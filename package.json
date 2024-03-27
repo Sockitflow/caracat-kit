@@ -1,7 +1,7 @@
 {
   "name": "@gorhom/bottom-sheet",
   "version": "4.6.1",
-  "description": "A performant interactive bottom sheet with fully configurable options 🚀",
+  "description": "A performant interactive UI library with fully configurable options 🚀",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
