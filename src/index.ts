@@ -1,4 +1,8 @@
 // bottom sheet
+// export { default } from './components/bottomSheet';
+
+
+// bottom sheet
 export { default } from './components/bottomSheet';
 
 // bottom sheet modal
