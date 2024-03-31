@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@gorhom/bottom-sheet": ["../../src/index"],
+      "caracal-react-native-kitty": ["../../src/index"],
       "@gorhom/showcase-template": [
         "../bare/node_modules/@gorhom/showcase-template"
       ],

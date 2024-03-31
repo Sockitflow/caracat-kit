@@ -9,7 +9,7 @@ import {
 import {
   BottomSheetTextInput,
   BottomSheetHandleProps,
-} from '@gorhom/bottom-sheet';
+} from 'caracal-react-native-kitty';
 import { useShowcaseTheme } from '@gorhom/showcase-template';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('screen');

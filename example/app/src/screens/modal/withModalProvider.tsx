@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
+import { BottomSheetModalProvider } from 'caracal-react-native-kitty';
 
 export const withModalProvider = (Component: FC) => () =>
   (

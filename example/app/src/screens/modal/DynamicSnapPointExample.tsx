@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
-import { BottomSheetModal, BottomSheetView } from '@gorhom/bottom-sheet';
+import { BottomSheetModal, BottomSheetView } from 'caracal-react-native-kitty';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button } from '../../components/button';
 import { withModalProvider } from './withModalProvider';

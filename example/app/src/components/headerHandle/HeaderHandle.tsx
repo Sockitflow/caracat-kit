@@ -3,7 +3,7 @@ import { StyleSheet, Text } from 'react-native';
 import {
   BottomSheetHandle,
   BottomSheetHandleProps,
-} from '@gorhom/bottom-sheet';
+} from 'caracal-react-native-kitty';
 
 interface HeaderHandleProps extends BottomSheetHandleProps {
   children?: string | React.ReactNode | React.ReactNode[];

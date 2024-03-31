@@ -8,7 +8,7 @@ import {
   SCROLLABLE_STATE,
   ScrollEventHandlerCallbackType,
   ScrollEventsHandlersHookType,
-} from '@gorhom/bottom-sheet';
+} from 'caracal-react-native-kitty';
 import { useGestureTranslationY } from './GestureTranslationContext';
 
 type ScrollEventContextType = {

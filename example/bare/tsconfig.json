@@ -2,8 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@gorhom/bottom-sheet": ["../../src/index"],
-      "@gorhom/bottom-sheet-example-app": ["../app/src/index"]
+      "caracal-react-native-kitty": ["../../src/index"],
+      "caracal-react-native-kitty-example-app": ["../app/src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

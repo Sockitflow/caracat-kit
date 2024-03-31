@@ -5,8 +5,8 @@ import {
   StackNavigationOptions,
   TransitionPresets,
 } from '@react-navigation/stack';
-import BottomSheet from '@gorhom/bottom-sheet';
-import { Button } from '@gorhom/bottom-sheet-example-app';
+import BottomSheet from 'caracal-react-native-kitty';
+import { Button } from 'caracal-react-native-kitty-example-app';
 import { NavigationContainer } from '@react-navigation/native';
 import createDummyScreen from '../DummyScreen';
 

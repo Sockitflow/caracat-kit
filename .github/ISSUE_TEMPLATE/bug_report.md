@@ -26,7 +26,7 @@ assignees: ''
 
 | Library                         | Version |
 | ------------------------------- | ------- |
-| @gorhom/bottom-sheet            | x.x.x   |
+| caracal-react-native-kitty            | x.x.x   |
 | react-native                    | x.x.x   |
 | react-native-reanimated         | x.x.x   |
 | react-native-gesture-handler    | x.x.x   |
@@ -42,7 +42,7 @@ assignees: ''
 
 1.
 2.
-3. 
+3.
 
 Describe what you expected to happen:
 
@@ -53,5 +53,5 @@ Describe what you expected to happen:
 
 <!--
 
- Please use the Bottom Sheet issue snack template https://snack.expo.io/@gorhom/bottom-sheet-v4-reproducible-issue-template or provide a minimal runnable repro as explained above so that the bug can be tested in isolation. or use
+ Please use the Bottom Sheet issue snack template https://snack.expo.io/caracal-react-native-kitty-v4-reproducible-issue-template or provide a minimal runnable repro as explained above so that the bug can be tested in isolation. or use
 -->

@@ -10,14 +10,14 @@ import {
   BottomSheetFlatList,
   BottomSheetModal,
   BottomSheetModalProvider,
-} from '@gorhom/bottom-sheet';
+} from 'caracal-react-native-kitty';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
 } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { createContactListMockData } from './utilities';
-import { SearchHandle, ContactItem } from '@gorhom/bottom-sheet-example-app';
+import { SearchHandle, ContactItem } from 'caracal-react-native-kitty-example-app';
 
 const SNAP_POINTS = [300];
 const DATA = createContactListMockData(30);

@@ -1,6 +1,6 @@
 import React, { useCallback, memo } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { ContactList } from '@gorhom/bottom-sheet-example-app';
+import { ContactList } from 'caracal-react-native-kitty-example-app';
 
 interface DummyScreenProps {
   title: string;
