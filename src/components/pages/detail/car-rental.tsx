@@ -9,7 +9,8 @@ import {
   Text,
   Image,
 } from 'react-native';
-// import Swiper from 'react-native-swiper';
+import {Swiper} from '../../../packages/react-native-swiper'
+
 // import FeatherIcon from 'react-native-vector-icons/Feather';
 // import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -91,7 +92,7 @@ export default function CarRentalDetailedScreen() {
               </View>
 
 {/* uncomment */}
-              {/* <Swiper
+              <Swiper
                 renderPagination={(index, total) => (
                   <View style={styles.photosPagination}>
                     <Text style={styles.photosPaginationText}>
@@ -108,7 +109,7 @@ export default function CarRentalDetailedScreen() {
                     style={styles.photosImg}
                   />
                 ))}
-              </Swiper> */}
+              </Swiper>
             </View>
 
             <TouchableOpacity

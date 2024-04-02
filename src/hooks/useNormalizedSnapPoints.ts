@@ -1,11 +1,11 @@
 import Animated, { useDerivedValue } from 'react-native-reanimated';
 import { normalizeSnapPoint } from '../utilities';
-import type { BottomSheetProps } from '../components/bottomSheet';
+import type { BottomSheetProps } from '../packages/bottomSheet';
 import {
   INITIAL_CONTAINER_HEIGHT,
   INITIAL_HANDLE_HEIGHT,
   INITIAL_SNAP_POINT,
-} from '../components/bottomSheet/constants';
+} from '../packages/bottomSheet/constants';
 
 /**
  * Convert percentage snap points to pixels in screen and calculate

@@ -1,8 +1,8 @@
 import { createContext, Ref } from 'react';
 import type { Insets } from 'react-native';
 import type Animated from 'react-native-reanimated';
-import type BottomSheet from '../../components/bottomSheet';
-import type { BottomSheetModalStackBehavior } from '../../components/bottomSheetModal';
+import type BottomSheet from '../../packages/bottomSheet';
+import type { BottomSheetModalStackBehavior } from '../../packages/bottomSheetModal';
 
 export interface BottomSheetModalInternalContextType {
   containerHeight: Animated.SharedValue<number>;

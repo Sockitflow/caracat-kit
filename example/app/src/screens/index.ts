@@ -1,5 +1,48 @@
 import { ShowcaseExampleScreenType } from '@gorhom/showcase-template';
 
+export const rnktScreens = [
+    {
+    title: 'Page',
+    data: [
+ {
+        name: 'Car rental',
+        slug: 'Page/CarRentalExample',
+        getScreen: () => require('./page/car-rental').default,
+      },
+       {
+        name: 'Social network',
+        slug: 'Page/SocialNetworkExample',
+        getScreen: () => require('./page/social-network').default,
+      },
+      {
+        name: 'Task management',
+        slug: 'Page/TaskManagementExample',
+        getScreen: () => require('./page/task-management').default,
+      },
+          {
+        name: 'Settings',
+        slug: 'Page/Settings',
+        getScreen: () => require('./page/settings').default,
+      },
+
+    ],
+  },
+  {
+    title: 'Header',
+    data: [
+
+    ],
+  },
+
+    {
+    title: 'Footer',
+    data: [
+
+    ],
+  },
+];
+
+
 export const screens = [
   {
     title: 'Basic',
@@ -123,28 +166,3 @@ export const screens = [
   },
 ];
 
-export const rnktScreens = [
-    {
-    title: 'Page',
-    data: [
- {
-        name: 'Car rental',
-        slug: 'Basic/ViewExample',
-        getScreen: () => require('./page/car-rental').default,
-      },
-    ],
-  },
-  {
-    title: 'Header',
-    data: [
-
-    ],
-  },
-
-    {
-    title: 'Footer',
-    data: [
-
-    ],
-  },
-];
