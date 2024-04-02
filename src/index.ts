@@ -1,5 +1,6 @@
-// bottom sheet
-// export { default } from './components/bottomSheet';
+// detail pages
+export * from './comp/pages/detail';
+
 
 
 // bottom sheet

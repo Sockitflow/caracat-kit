@@ -124,18 +124,27 @@ export const screens = [
 ];
 
 export const rnktScreens = [
+    {
+    title: 'Page',
+    data: [
+ {
+        name: 'Car rental',
+        slug: 'Basic/ViewExample',
+        getScreen: () => require('./page/car-rental').default,
+      },
+    ],
+  },
   {
     title: 'Header',
     data: [
 
     ],
   },
+
     {
     title: 'Footer',
     data: [
 
     ],
   },
-
-
 ];
