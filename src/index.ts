@@ -1,10 +1,14 @@
-// detail pages
-export * from './components/pages/detail';
+// pages
+export * from './pages'
 
-export * from './components/pages/core';
+// components
+export * from './components'
 
-// export * from './components/sections/pages/core';
+// sections
+// export * from './sections'
 
+// sections
+export * from './states'
 
 // bottom sheet
 export { default } from './packages/bottomSheet';

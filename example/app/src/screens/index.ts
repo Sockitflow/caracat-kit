@@ -73,15 +73,45 @@ export const rnktScreens = [
     data: [
       {
         name: 'Simple',
-        slug: 'State/EmptyStatse',
-        getScreen: () => require('./page/detail/car-rental').default,
+        slug: 'State/EmptyState',
+        getScreen: () => require('./state/empty/simple').default,
       },{
         name: 'Multiple actions',
-        slug: 'State/EmptysStateWithMultipleActions',
-        getScreen: () => require('./page/detail/car-rental').default,
+        slug: 'State/EmptyStateWithMultipleActions',
+        getScreen: () => require('./state/empty/multiple-actions').default,
       },
     ],
   },
+        {
+    title: 'Components 国家',
+    data: [
+
+    ],
+  },
+      {
+    title: 'Calendar',
+    data: [
+      {
+        name: 'Date picker',
+        slug: 'Components/DatePicker',
+        getScreen: () => require('./components/calendar/date-picker').default,
+      }
+    ],
+  },
+  //       {
+  //   title: 'List',
+  //   data: [
+  //     {
+  //       name: 'Simple',
+  //       slug: 'State/EmptyState',
+  //       getScreen: () => require('./state/empty/simple').default,
+  //     },{
+  //       name: 'Multiple actions',
+  //       slug: 'State/EmptyStateWithMultipleActions',
+  //       getScreen: () => require('./state/empty/multiple-actions').default,
+  //     },
+  //   ],
+  // },
 ];
 
 
