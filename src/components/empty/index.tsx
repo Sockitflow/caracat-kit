@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, View, Text } from 'react-native';
 
-export function SimpleEmptyState() {
+export function EmptyState() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#f6f6f6' }}>
       <View style={styles.container}>

@@ -3,6 +3,8 @@ export * from './components/pages/detail';
 
 export * from './components/pages/core';
 
+// export * from './components/sections/pages/core';
+
 
 // bottom sheet
 export { default } from './packages/bottomSheet';

@@ -1,32 +1,54 @@
 import { ShowcaseExampleScreenType } from '@gorhom/showcase-template';
 
 export const rnktScreens = [
-    {
-    title: 'Page',
-    data: [
- {
-        name: 'Car rental',
-        slug: 'Page/CarRentalExample',
-        getScreen: () => require('./page/car-rental').default,
-      },
-       {
-        name: 'Social network',
-        slug: 'Page/SocialNetworkExample',
-        getScreen: () => require('./page/social-network').default,
-      },
       {
-        name: 'Task management',
-        slug: 'Page/TaskManagementExample',
-        getScreen: () => require('./page/task-management').default,
-      },
+    title: 'Pages 部分',
+    data: [
+
+    ],
+  },
+    {
+    title: 'Core',
+    data: [
+
           {
         name: 'Settings',
         slug: 'Page/Settings',
-        getScreen: () => require('./page/settings').default,
+        getScreen: () => require('./page/core/settings').default,
       },
 
     ],
   },
+      {
+    title: 'Detail',
+    data: [
+ {
+        name: 'Car rental',
+        slug: 'Page/CarRentalExample',
+        getScreen: () => require('./page/detail/car-rental').default,
+      },
+       {
+        name: 'Social network',
+        slug: 'Page/SocialNetworkExample',
+        getScreen: () => require('./page/detail/social-network').default,
+      },
+      {
+        name: 'Task management',
+        slug: 'Page/TaskManagementExample',
+        getScreen: () => require('./page/detail/task-management').default,
+      },
+
+
+    ],
+  },
+
+  {
+    title: 'Sections 部分',
+    data: [
+
+    ],
+  },
+
   {
     title: 'Header',
     data: [
@@ -38,6 +60,26 @@ export const rnktScreens = [
     title: 'Footer',
     data: [
 
+    ],
+  },
+        {
+    title: 'States 国家',
+    data: [
+
+    ],
+  },
+      {
+    title: 'Empty',
+    data: [
+      {
+        name: 'Simple',
+        slug: 'State/EmptyStatse',
+        getScreen: () => require('./page/detail/car-rental').default,
+      },{
+        name: 'Multiple actions',
+        slug: 'State/EmptysStateWithMultipleActions',
+        getScreen: () => require('./page/detail/car-rental').default,
+      },
     ],
   },
 ];

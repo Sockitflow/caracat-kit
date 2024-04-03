@@ -9,7 +9,7 @@ import {
   Text,
   Image,
 } from 'react-native';
-import {Swiper} from '../../../packages/react-native-swiper'
+import { Swiper } from '../../../../src/packages/react-native-swiper';
 
 // import FeatherIcon from 'react-native-vector-icons/Feather';
 // import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';

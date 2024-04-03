@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 // import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-export function ModernEmptyStateWithMultipleActions() {
+export function EmptyStateWithMultipleActions() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.empty}>
