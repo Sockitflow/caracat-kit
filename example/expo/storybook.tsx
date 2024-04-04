@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { ShowcaseApp } from '@gorhom/showcase-template';
 import { version, description, nickname } from '../../package.json';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { rnktScreens as defaultScreens } from '../app/src/screens';
+import { screens as defaultScreens } from '../app/src/screens';
 
 const author = {
   username: 'Hossam sulleman',

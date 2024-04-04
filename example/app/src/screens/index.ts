@@ -1,6 +1,6 @@
 import { ShowcaseExampleScreenType } from '@gorhom/showcase-template';
 
-export const rnktScreens = [
+export const caracatKittyScreens = [
       {
     title: 'Pages الصفحات',
     data: [
