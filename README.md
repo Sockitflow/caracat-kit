@@ -75,4 +75,4 @@ To keep this library maintained and up-to-date please consider [sponsoring it on
 [MIT](./LICENSE)
 
 ---
-![OIG1](https://github.com/hossam1231/caracat-react-native-kitty/assets/93336567/0a4f4ed8-7569-400c-86a8-c2c3274fccfe)
+![OIG1](https://github.com/hossam1231/caracat-react-native-kitty/assets/93336567/76629a21-a4cd-472f-b8cc-bbccce66f92e)
