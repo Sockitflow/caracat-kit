@@ -1,6 +1,5 @@
-![image](https://github.com/hossam1231/rnkt-library/assets/93336567/f1162bca-d240-4fb4-bf8e-27eddda1da84)
-
-# React Native Bottom Sheet
+![OIG1](https://github.com/hossam1231/caracat-react-native-kitty/assets/93336567/d0599607-85aa-4f65-a408-5e6cfd81de42)
+# Caracat React Native Kitty
 
 [![Reanimated v2 version](https://img.shields.io/github/package-json/v/gorhom/react-native-bottom-sheet/master?label=Reanimated%20v2&style=flat-square)](https://www.npmjs.com/package/caracal-react-native-kitty) [![Reanimated v1 version](https://img.shields.io/github/package-json/v/gorhom/react-native-bottom-sheet/v2?label=Reanimated%20v1&style=flat-square)](https://www.npmjs.com/package/caracal-react-native-kitty) [![npm](https://img.shields.io/npm/l/caracal-react-native-kitty?style=flat-square)](https://www.npmjs.com/package/caracal-react-native-kitty) [![npm](https://img.shields.io/badge/types-included-blue?style=flat-square)](https://www.npmjs.com/package/caracal-react-native-kitty) [![runs with expo](https://img.shields.io/badge/Runs%20with%20Expo-4630EB.svg?style=flat-square&logo=EXPO&labelColor=f3f3f3&logoColor=000)](https://expo.io/)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
@@ -9,7 +8,7 @@
 
 A performant interactive bottom sheet with fully configurable options 🚀
 
-![React Native Bottom Sheet](./preview.gif)
+![Caracat React Native Kitty](./preview.gif)
 
 ---
 
@@ -33,7 +32,7 @@ Check out [the documentation website](https://ui.gorhom.dev/components/bottom-sh
 
 ## Versioning
 
-This library been written in 2 versions of `Reanimated`, and kept both implementation in 2 separate branches:
+This library has been written in two versions of `Reanimated`, and kept both implementations in two separate branches:
 
 - **`v2`** | [branch](https://github.com/gorhom/react-native-bottom-sheet/tree/v2) | [changelog](https://github.com/gorhom/react-native-bottom-sheet/blob/v2/CHANGELOG.md) : written with `Reanimated v1` & compatible with `Reanimated v2`.
 
@@ -68,7 +67,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 ## Sponsor & Support
 
-To keep this library maintained and up-to-date please consider [sponsoring it on GitHub](https://github.com/sponsors/gorhom). Or if you are looking for a private support or help in customizing the experience, then reach out to me on Twitter [@gorhom](https://twitter.com/gorhom).
+To keep this library maintained and up-to-date please consider [sponsoring it on GitHub](https://github.com/sponsors/gorhom). Or if you are looking for private support or help in customizing the experience, then reach out to me on Twitter [@gorhom](https://twitter.com/gorhom).
 
 ## License
 
@@ -84,4 +83,3 @@ To keep this library maintained and up-to-date please consider [sponsoring it on
     <img height="18" alt="Mo Gorhom" src="./mogorhom-dark.png">
   </a>
 </p>
-s
