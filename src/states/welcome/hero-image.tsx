@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-export function StaticWelcomePageWithHeroImage() {
+export default function WelcomeStateWithHeroImage() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.hero}>

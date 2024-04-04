@@ -82,6 +82,16 @@ export const rnktScreens = [
       },
     ],
   },
+       {
+    title: 'Welcome',
+    data: [
+      {
+        name: 'Hero Image',
+        slug: 'State/WelcomeState',
+        getScreen: () => require('./state/welcome/hero-image').default,
+      }
+    ],
+  },
         {
     title: 'Components 国家',
     data: [

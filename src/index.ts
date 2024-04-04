@@ -5,7 +5,7 @@ export * from './pages'
 export * from './components'
 
 // sections
-// export * from './sections'
+export * from './sections'
 
 // sections
 export * from './states'

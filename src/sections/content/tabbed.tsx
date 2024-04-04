@@ -20,7 +20,7 @@ const tabs: Tab[] = [
   { name: 'Vans', icon: 'user' },
 ];
 
-export function ToggleButtonGroupWithTextAndIconTabs(): JSX.Element {
+export default function TabbedContent(): JSX.Element {
   const [value, setValue] = React.useState<number>(0);
 
   return (
