@@ -42,7 +42,7 @@ This library has been written in two versions of `Reanimated`, and kept both imp
 
 ## Author
 
-- [Mo Gorhom](https://gorhom.dev/)
+- [Hossam sulleman](https://github.com/hossam1231)
 
 ## Contributors
 
