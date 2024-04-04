@@ -76,11 +76,4 @@ To keep this library maintained and up-to-date please consider [sponsoring it on
 
 ---
 
-<p align="center">
-  <a href="https://gorhom.dev/#gh-light-mode-only" target="_blank">
-    <img height="18" alt="Mo Gorhom" src="./mogorhom-light.png">
-  </a>
-  <a href="https://gorhom.dev/#gh-dark-mode-only" target="_blank">
-    <img height="18" alt="Mo Gorhom" src="./mogorhom-dark.png">
-  </a>
-</p>
+
