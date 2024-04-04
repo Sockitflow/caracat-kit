@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@gorhom/bottom-sheet": ["./src/index"]
+      "caracal-react-native-kitty": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
@@ -24,5 +24,5 @@
     "target": "esnext"
   },
   "exclude": ["example"],
-  "include": ["src"]
+  "include": ["src", "example/expo/src/decorator.tsx"]
 }

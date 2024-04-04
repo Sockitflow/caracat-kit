@@ -9,7 +9,7 @@ import {
   WINDOW_HEIGHT,
   GestureEventHandlerCallbackType,
   ANIMATION_SOURCE,
-} from '@gorhom/bottom-sheet';
+} from 'caracal-react-native-kitty';
 import { useGestureTranslationY } from './GestureTranslationContext';
 
 const dismissKeyboardOnJs = runOnJS(Keyboard.dismiss);

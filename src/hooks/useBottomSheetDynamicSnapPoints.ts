@@ -3,7 +3,7 @@ import { useDerivedValue, useSharedValue } from 'react-native-reanimated';
 import {
   INITIAL_HANDLE_HEIGHT,
   INITIAL_SNAP_POINT,
-} from '../components/bottomSheet/constants';
+} from '../packages/bottomSheet/constants';
 
 /**
  * Provides dynamic content height calculating functionalities, by

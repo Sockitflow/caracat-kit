@@ -1,13 +1,25 @@
-// bottom sheet
-// export { default } from './components/bottomSheet';
+// pages
+export * from './pages'
+
+// components
+export * from './components'
+
+// sections
+export * from './sections'
+
+// sections
+export * from './states'
 
 
+// utility
+export * from './utility'
+
 // bottom sheet
-export { default } from './components/bottomSheet';
+export { default } from './packages/bottomSheet';
 
 // bottom sheet modal
-export { default as BottomSheetModal } from './components/bottomSheetModal';
-export { default as BottomSheetModalProvider } from './components/bottomSheetModalProvider';
+export { default as BottomSheetModal } from './packages/bottomSheetModal';
+export { default as BottomSheetModalProvider } from './packages/bottomSheetModalProvider';
 
 //#region hooks
 export { useBottomSheet } from './hooks/useBottomSheet';
@@ -30,33 +42,33 @@ export {
   BottomSheetSectionList,
   BottomSheetFlatList,
   BottomSheetVirtualizedList,
-} from './components/bottomSheetScrollable';
-export { default as BottomSheetHandle } from './components/bottomSheetHandle';
-export { default as BottomSheetDraggableView } from './components/bottomSheetDraggableView';
-export { default as BottomSheetView } from './components/bottomSheetView';
-export { default as BottomSheetTextInput } from './components/bottomSheetTextInput';
-export { default as BottomSheetBackdrop } from './components/bottomSheetBackdrop';
-export { default as BottomSheetFooter } from './components/bottomSheetFooter';
-export { default as BottomSheetFooterContainer } from './components/bottomSheetFooterContainer/BottomSheetFooterContainer';
+} from './packages/bottomSheetScrollable';
+export { default as BottomSheetHandle } from './packages/bottomSheetHandle';
+export { default as BottomSheetDraggableView } from './packages/bottomSheetDraggableView';
+export { default as BottomSheetView } from './packages/bottomSheetView';
+export { default as BottomSheetTextInput } from './packages/bottomSheetTextInput';
+export { default as BottomSheetBackdrop } from './packages/bottomSheetBackdrop';
+export { default as BottomSheetFooter } from './packages/bottomSheetFooter';
+export { default as BottomSheetFooterContainer } from './packages/bottomSheetFooterContainer/BottomSheetFooterContainer';
 
 // touchables
-import BottomSheetTouchable from './components/touchables';
+import BottomSheetTouchable from './packages/touchables';
 export const {
   TouchableHighlight,
   TouchableOpacity,
   TouchableWithoutFeedback,
 } = BottomSheetTouchable;
 // utils
-export { createBottomSheetScrollableComponent } from './components/bottomSheetScrollable';
+export { createBottomSheetScrollableComponent } from './packages/bottomSheetScrollable';
 //#endregion
 
 //#region types
-export type { BottomSheetProps } from './components/bottomSheet';
-export type { BottomSheetModalProps } from './components/bottomSheetModal';
-export type { BottomSheetHandleProps } from './components/bottomSheetHandle';
-export type { BottomSheetBackgroundProps } from './components/bottomSheetBackground';
-export type { BottomSheetBackdropProps } from './components/bottomSheetBackdrop';
-export type { BottomSheetFooterProps } from './components/bottomSheetFooter';
+export type { BottomSheetProps } from './packages/bottomSheet';
+export type { BottomSheetModalProps } from './packages/bottomSheetModal';
+export type { BottomSheetHandleProps } from './packages/bottomSheetHandle';
+export type { BottomSheetBackgroundProps } from './packages/bottomSheetBackground';
+export type { BottomSheetBackdropProps } from './packages/bottomSheetBackdrop';
+export type { BottomSheetFooterProps } from './packages/bottomSheetFooter';
 
 export type {
   BottomSheetFlatListMethods,
@@ -64,7 +76,7 @@ export type {
   BottomSheetSectionListMethods,
   BottomSheetVirtualizedListMethods,
   BottomSheetScrollableProps,
-} from './components/bottomSheetScrollable';
+} from './packages/bottomSheetScrollable';
 
 export type {
   ScrollEventsHandlersHookType,

@@ -5,7 +5,7 @@ import BottomSheet, {
   BottomSheetScrollView,
   SCROLLABLE_STATE,
   useBottomSheetInternal,
-} from '@gorhom/bottom-sheet';
+} from 'caracal-react-native-kitty';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button } from '../../../components/button';
 import { ContactItem } from '../../../components/contactItem';

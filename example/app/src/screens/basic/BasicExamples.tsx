@@ -1,6 +1,6 @@
 import React, { useCallback, memo, useRef, useMemo, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import BottomSheet, { useBottomSheetSpringConfigs } from '@gorhom/bottom-sheet';
+import BottomSheet, { useBottomSheetSpringConfigs } from 'caracal-react-native-kitty';
 import { ContactList } from '../../components/contactList';
 import { Button } from '../../components/button';
 

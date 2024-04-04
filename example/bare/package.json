@@ -1,6 +1,6 @@
 {
-  "name": "@gorhom/bottom-sheet-example",
-  "description": "Example app for @gorhom/bottom-sheet",
+  "name": "caracal-react-native-kitty-example",
+  "description": "Example app for caracal-react-native-kitty",
   "version": "0.0.1",
   "private": true,
   "scripts": {

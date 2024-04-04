@@ -4,7 +4,7 @@ import { enableScreens } from 'react-native-screens';
 enableScreens(true);
 
 // @ts-ignore
-import { enableLogging } from '@gorhom/bottom-sheet';
+import { enableLogging } from 'caracal-react-native-kitty';
 enableLogging();
 
 import App from './src/App';

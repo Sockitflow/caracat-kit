@@ -1,13 +1,13 @@
 import React, { useMemo } from 'react';
 import { StyleSheet } from 'react-native';
 import { ShowcaseApp } from '@gorhom/showcase-template';
-import { version, description } from '../../../package.json';
+import { version, description, nickname } from '../../package.json';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { rnktScreens as defaultScreens } from '../../app/src/screens';
+import { rnktScreens as defaultScreens } from '../app/src/screens';
 
 const author = {
-  username: 'Mo Gorhom',
-  url: 'https://gorhom.dev',
+  username: 'Hossam sulleman',
+  url: 'mailto:hossamsulleman@gmail.com',
 };
 
 interface AppProps {
@@ -22,7 +22,7 @@ export const App = ({ screens: providedScreens }: AppProps) => {
   return (
     <GestureHandlerRootView style={styles.container}>
       <ShowcaseApp
-        name="Bottom Sheet"
+        name={nickname}
         description={description}
         version={version}
         author={author}

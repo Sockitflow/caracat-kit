@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import invariant from 'invariant';
-import { INITIAL_SNAP_POINT } from '../components/bottomSheet/constants';
-import type { BottomSheetProps } from '../components/bottomSheet';
+import { INITIAL_SNAP_POINT } from '../packages/bottomSheet/constants';
+import type { BottomSheetProps } from '../packages/bottomSheet';
 
 /**
  * @todo

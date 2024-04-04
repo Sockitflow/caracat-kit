@@ -7,7 +7,7 @@ import type Animated from 'react-native-reanimated';
 import type {
   AnimateToPositionType,
   BottomSheetProps,
-} from '../components/bottomSheet/types';
+} from '../packages/bottomSheet/types';
 import type {
   ANIMATION_STATE,
   KEYBOARD_STATE,

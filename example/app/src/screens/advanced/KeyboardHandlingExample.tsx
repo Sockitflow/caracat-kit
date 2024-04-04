@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import BottomSheet from '@gorhom/bottom-sheet';
+import BottomSheet from 'caracal-react-native-kitty';
 import {
   SearchHandle,
   SEARCH_HANDLE_HEIGHT,

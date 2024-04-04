@@ -1,6 +1,6 @@
 import React, { memo, useMemo } from 'react';
 import { StyleProp, StyleSheet, Text, ViewStyle } from 'react-native';
-import { BottomSheetHandleProps } from '@gorhom/bottom-sheet';
+import { BottomSheetHandleProps } from 'caracal-react-native-kitty';
 import Animated, {
   Extrapolate,
   interpolate,
