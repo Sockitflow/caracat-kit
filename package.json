@@ -1,9 +1,9 @@
 {
   "name": "caracat-react-native-kitty",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A performant interactive UI library with fully configurable options 🚀",
   "main": "lib/commonjs/index",
-  "nickname":"caracat Kitty",
+  "nickname": "caracat Kitty",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
   "react-native": "src/index.ts",
@@ -31,7 +31,7 @@
   "scripts": {
     "typescript": "tsc --skipLibCheck --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "version": "npm version patch && npm publish" ,
+    "version": "npm version patch && git add . && git commit -m 'Bump version' && git push && npm publish",
     "build": "bob build && yarn copy-dts && yarn delete-dts.js && yarn delete-debug-view",
     "copy-dts": "copyfiles -u 1 \"src/**/*.d.ts\" lib/typescript",
     "delete-debug-view": "rm -r ./lib/commonjs/components/bottomSheetDebugView && rm -r ./lib/module/components/bottomSheetDebugView && rm -r ./lib/typescript/components/bottomSheetDebugView",
