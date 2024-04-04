@@ -2,7 +2,7 @@ import { ShowcaseExampleScreenType } from '@gorhom/showcase-template';
 
 export const rnktScreens = [
       {
-    title: 'Pages 部分',
+    title: 'Pages الصفحات',
     data: [
 
     ],
@@ -43,7 +43,7 @@ export const rnktScreens = [
   },
 
   {
-    title: 'Sections 部分',
+    title: 'Sections مقاطع',
     data: [
 
     ],
@@ -52,7 +52,16 @@ export const rnktScreens = [
   {
     title: 'Header',
     data: [
-
+      {
+        name: 'Simple',
+        slug: 'Sections/SimpleHeader',
+        getScreen: () => require('./section/header/simple').default,
+      },
+  {
+        name: 'Multiple actions',
+        slug: 'Sections/MultipleActions',
+        getScreen: () => require('./section/header/multiple-actions').default,
+      },
     ],
   },
 
@@ -63,7 +72,7 @@ export const rnktScreens = [
     ],
   },
         {
-    title: 'States 国家',
+    title: 'States الولايات',
     data: [
 
     ],
@@ -93,7 +102,7 @@ export const rnktScreens = [
     ],
   },
         {
-    title: 'Components 国家',
+    title: 'Components مكونات',
     data: [
 
     ],

@@ -9,10 +9,9 @@ import {
 } from 'react-native';
 // import FeatherIcon from 'react-native-vector-icons/Feather';
 
-export function PersonalPageHeaderWithMultipleActions() {
+export default function HeaderWithMultipleActions() {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
-      <View style={styles.container}>
+
         <View style={styles.header}>
           <Text style={styles.headerTitle}>
             Hello <Text style={{ fontWeight: 'bold' }}>Randy</Text>
@@ -49,13 +48,9 @@ export function PersonalPageHeaderWithMultipleActions() {
           </View>
         </View>
 
-        <View style={styles.placeholder}>
-          <View style={styles.placeholderInset}>
-            {/* Replace with your content */}
-          </View>
-        </View>
-      </View>
-    </SafeAreaView>
+
+
+
   );
 }
 
