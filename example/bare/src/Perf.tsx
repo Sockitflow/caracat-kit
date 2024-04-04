@@ -6,7 +6,7 @@ import React, {
   useState,
 } from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import BottomSheet from 'caracal-react-native-kitty';
+import BottomSheet from 'caracat-react-native-kitty';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const App = () => {

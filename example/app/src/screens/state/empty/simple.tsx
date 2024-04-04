@@ -1,5 +1,5 @@
 import React from 'react'
-import { EmptyState as _EmptyState } from  'caracal-react-native-kitty'
+import { EmptyState as _EmptyState } from  'caracat-react-native-kitty'
 
 const EmptyState = () => {
   return (

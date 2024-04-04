@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { BottomSheetModal } from 'caracal-react-native-kitty';
+import { BottomSheetModal } from 'caracat-react-native-kitty';
 import { Button } from '../../components/button';
 import { ContactList } from '../../components/contactList';
 import { HeaderHandle } from '../../components/headerHandle';

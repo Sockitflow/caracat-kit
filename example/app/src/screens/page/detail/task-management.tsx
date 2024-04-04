@@ -1,5 +1,5 @@
 import React from 'react'
-import { TaskManagementDetailExample } from 'caracal-react-native-kitty'
+import { TaskManagementDetailExample } from 'caracat-react-native-kitty'
 
 const TaskManagementDetail= () => {
   return (

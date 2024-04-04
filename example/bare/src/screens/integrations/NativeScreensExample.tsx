@@ -6,7 +6,7 @@ import {
   ModalBackdropExample,
   Button,
   withModalProvider,
-} from 'caracal-react-native-kitty-example-app';
+} from 'caracat-react-native-kitty-example-app';
 
 const RootScreen = () => {
   const { navigate } = useNavigation();

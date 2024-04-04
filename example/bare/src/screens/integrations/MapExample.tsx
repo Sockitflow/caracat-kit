@@ -19,14 +19,14 @@ import {
   BottomSheetBackdrop,
   TouchableOpacity,
   BottomSheetBackdropProps,
-} from 'caracal-react-native-kitty';
+} from 'caracat-react-native-kitty';
 import { useHeaderHeight } from '@react-navigation/elements';
 import { createLocationListMockData } from '../../utilities';
 import {
   withModalProvider,
   SearchHandle,
   SEARCH_HANDLE_HEIGHT,
-} from 'caracal-react-native-kitty-example-app';
+} from 'caracat-react-native-kitty-example-app';
 import { LocationItem } from '../../components/locationItem';
 import {
   LocationDetails,

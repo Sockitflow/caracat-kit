@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import BottomSheet from 'caracal-react-native-kitty';
-import { ContactList } from 'caracal-react-native-kitty-example-app';
+import BottomSheet from 'caracat-react-native-kitty';
+import { ContactList } from 'caracat-react-native-kitty-example-app';
 
 const FirstRoute = () => {
   const snapPoints = useMemo(() => ['25%', '50%', '90%'], []);

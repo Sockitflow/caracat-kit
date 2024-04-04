@@ -1,5 +1,5 @@
 import React from 'react'
-import { SocialNetworkDetailExample } from 'caracal-react-native-kitty'
+import { SocialNetworkDetailExample } from 'caracat-react-native-kitty'
 
 const SocialNetworkDetail= () => {
   return (

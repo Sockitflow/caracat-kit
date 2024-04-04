@@ -1,5 +1,5 @@
 import React from 'react'
-import { CarRentalDetailExample } from 'caracal-react-native-kitty'
+import { CarRentalDetailExample } from 'caracat-react-native-kitty'
 
 const CarRentalDetail= () => {
   return (

@@ -4,7 +4,7 @@ import {
   BottomSheetModal,
   BottomSheetBackdrop,
   BottomSheetBackdropProps,
-} from 'caracal-react-native-kitty';
+} from 'caracat-react-native-kitty';
 import { Button } from '../../components/button';
 import { ContactList } from '../../components/contactList';
 import { HeaderHandle } from '../../components/headerHandle';

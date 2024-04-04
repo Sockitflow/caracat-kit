@@ -1,6 +1,6 @@
 import React, { memo, useMemo } from 'react';
 import { StyleSheet } from 'react-native';
-import { BottomSheetBackgroundProps } from 'caracal-react-native-kitty';
+import { BottomSheetBackgroundProps } from 'caracat-react-native-kitty';
 import Animated, {
   useAnimatedStyle,
   interpolateColor,

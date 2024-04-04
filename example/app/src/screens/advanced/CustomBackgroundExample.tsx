@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo, useRef } from 'react';
 import { View, StyleSheet } from 'react-native';
-import BottomSheet from 'caracal-react-native-kitty';
+import BottomSheet from 'caracat-react-native-kitty';
 import { CustomBackground } from '../../components/customBackground';
 import { Button } from '../../components/button';
 import { ContactList } from '../../components/contactList';

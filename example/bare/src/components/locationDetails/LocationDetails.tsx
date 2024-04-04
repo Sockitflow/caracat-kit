@@ -2,7 +2,7 @@ import React, { memo, useCallback, useMemo } from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
 import { ShowcaseLabel, useShowcaseTheme } from '@gorhom/showcase-template';
-import { Button } from 'caracal-react-native-kitty-example-app';
+import { Button } from 'caracat-react-native-kitty-example-app';
 import type { Location } from '../../types';
 
 const keyExtractor = (item: string, index: number) => `${index}${item}`;

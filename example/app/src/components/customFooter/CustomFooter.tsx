@@ -4,7 +4,7 @@ import {
   BottomSheetFooter,
   BottomSheetFooterProps,
   useBottomSheet,
-} from 'caracal-react-native-kitty';
+} from 'caracat-react-native-kitty';
 import { RectButton } from 'react-native-gesture-handler';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Animated, {

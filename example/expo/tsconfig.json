@@ -2,8 +2,8 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "paths": {
-      "caracal-react-native-kitty": ["../../src/index"],
-      "caracal-react-native-kitty-example-app": ["../app/src/index"]
+      "caracat-react-native-kitty": ["../../src/index"],
+      "caracat-react-native-kitty-example-app": ["../app/src/index"]
     },
     "strict": true
   }

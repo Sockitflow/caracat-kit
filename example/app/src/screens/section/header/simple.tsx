@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header as _Header} from 'caracal-react-native-kitty'
+import { Header as _Header} from 'caracat-react-native-kitty'
 
 const Header = () => {
   return (

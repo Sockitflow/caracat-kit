@@ -1,5 +1,5 @@
 import React from 'react'
-import {WelcomeStateWithHeroImage as _WelcomeStateWithHeroImage} from 'caracal-react-native-kitty'
+import {WelcomeStateWithHeroImage as _WelcomeStateWithHeroImage} from 'caracat-react-native-kitty'
 
 const WelcomeStateWithHeroImage = () => {
   return (

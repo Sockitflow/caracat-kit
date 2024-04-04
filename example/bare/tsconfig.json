@@ -2,8 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "caracal-react-native-kitty": ["../../src/index"],
-      "caracal-react-native-kitty-example-app": ["../app/src/index"]
+      "caracat-react-native-kitty": ["../../src/index"],
+      "caracat-react-native-kitty-example-app": ["../app/src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

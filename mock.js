@@ -4,7 +4,7 @@
  * Example:
  *
  * ```js
- * jest.mock('caracal-react-native-kitty', () => require('caracal-react-native-kitty/mock'));
+ * jest.mock('caracat-react-native-kitty', () => require('caracat-react-native-kitty/mock'));
  * ```
  */
 

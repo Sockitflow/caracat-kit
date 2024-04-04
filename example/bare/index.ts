@@ -4,7 +4,7 @@ import { enableScreens } from 'react-native-screens';
 enableScreens(true);
 
 // @ts-ignore
-import { enableLogging } from 'caracal-react-native-kitty';
+import { enableLogging } from 'caracat-react-native-kitty';
 enableLogging();
 
 import { AppRegistry, LogBox } from 'react-native';

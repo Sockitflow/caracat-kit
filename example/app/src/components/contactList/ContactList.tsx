@@ -8,7 +8,7 @@ import {
   BottomSheetSectionList,
   BottomSheetVirtualizedList,
   BottomSheetView,
-} from 'caracal-react-native-kitty';
+} from 'caracat-react-native-kitty';
 import {
   createContactListMockData,
   createContactSectionsMockData,
