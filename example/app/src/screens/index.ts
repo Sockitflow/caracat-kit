@@ -1,6 +1,18 @@
 import { ShowcaseExampleScreenType } from '@gorhom/showcase-template';
 
 export const caracatKittyScreens = [
+ {
+    title: 'Example',
+    data: [
+
+          {
+        name: 'Demo',
+        slug: 'Example/Demo',
+        getScreen: () => require('./demo').default,
+      },
+
+    ],
+  },
       {
     title: 'Pages الصفحات',
     data: [

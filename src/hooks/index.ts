@@ -1,3 +1,6 @@
+export { useShowcaseTheme } from './useShowcaseTheme';
+export { useTileDimensions } from './useTileDimensions';
+
 export { useBottomSheet } from './useBottomSheet';
 export { useBottomSheetInternal } from './useBottomSheetInternal';
 
@@ -22,3 +25,4 @@ export { useNormalizedSnapPoints } from './useNormalizedSnapPoints';
 export { useReactiveSharedValue } from './useReactiveSharedValue';
 export { useBottomSheetDynamicSnapPoints } from './useBottomSheetDynamicSnapPoints';
 export { useBottomSheetGestureHandlers } from './useBottomSheetGestureHandlers';
+

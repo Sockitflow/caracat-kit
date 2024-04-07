@@ -12,7 +12,7 @@ export * from './states'
 
 
 // utility
-export * from './utility'
+// export * from './utility'
 
 // bottom sheet
 export { default } from './packages/bottomSheet';

@@ -1,25 +1,24 @@
+import Faker from 'faker';
 import { Dimensions } from 'react-native';
 import type { Contact, Location } from '../types';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('screen');
 
-const randomString = () => Math.random().toString(36).substring(7);
-
 export const createContactListMockData = (count: number = 20): Contact[] => {
   return new Array(count).fill(0).map(() => ({
-    name: `${randomString()} ${randomString()}`,
-    address: `${randomString()}, ${randomString()}`,
-    jobTitle: randomString(),
+    name: `${Faker.name.firstName()} ${Faker.name.lastName()}`,
+    address: `${Faker.address.city()}, ${Faker.address.country()}`,
+    jobTitle: Faker.name.jobTitle(),
   }));
 };
 
 export const createContactSectionsMockData = (count: number = 20) => {
   return new Array(Math.round(count / 4)).fill(0).map(() => ({
-    title: randomString(),
+    title: Faker.address.country(),
     data: new Array(Math.round(count / 4)).fill(0).map(() => ({
-      name: `${randomString()} ${randomString()}`,
-      address: `${randomString()}, ${randomString()}`,
-      jobTitle: randomString(),
+      name: `${Faker.name.firstName()} ${Faker.name.lastName()}`,
+      address: `${Faker.address.city()}, ${Faker.address.country()}`,
+      jobTitle: Faker.name.jobTitle(),
     })),
   }));
 };
@@ -38,12 +37,12 @@ export const createLocationListMockData = (count: number = 50): Location[] => {
       ],
     },
     ...new Array(count).fill(0).map((_, index) => ({
-      id: Math.random().toString(36).substring(7),
-      name: `${randomString()}`,
-      address: `${randomString()}, ${randomString()}`,
+      id: Faker.random.alphaNumeric(6),
+      name: `${Faker.address.city()}`,
+      address: `${Faker.address.state()}, ${Faker.address.country()}`,
       photos: Array(5)
         .fill(0)
-        .map((__, _index) => `https://source.unsplash.com/random/${SCREEN_WIDTH + index + _index}`),
+        .map((__, _index) => Faker.image.city(SCREEN_WIDTH + index + _index)),
     })),
   ];
 };

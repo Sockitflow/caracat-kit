@@ -6,7 +6,7 @@ import { version, description } from '../../../package.json';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const author = {
-  username: 'Mo Gorhom',
+  username: 'Hossam Sulleman',
   url: 'https://gorhom.dev',
 };
 

@@ -56,7 +56,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://react-native-training.eu"><img src="https://avatars.githubusercontent.com/u/1566403?v=4?s=76" width="76px;" alt=""/><br /><sub><b>Vojtech Novak</b></sub></a><br /><a href="https://github.com/gorhom/react-native-bottom-sheet/commits?author=vonovak" title="Code">💻</a></td>
-    <td align="center"><a href="https://react-native-training.eu"><img src="https://avatars.githubusercontent.com/u/4061838?v=4" width="76px;" alt=""/><br /><sub><b>Mo Gorhom</b></sub></a><br /><a href="https://github.com/gorhom/react-native-bottom-sheet/commits?author=vonovak" title="Code">💻</a></td>
+    <td align="center"><a href="https://react-native-training.eu"><img src="https://avatars.githubusercontent.com/u/4061838?v=4" width="76px;" alt=""/><br /><sub><b>Mo gohorm</b></sub></a><br /><a href="https://github.com/gorhom/react-native-bottom-sheet/commits?author=vonovak" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/kickbk"><img src="https://avatars.githubusercontent.com/u/31323376?v=4?s=76" width="76px;" alt=""/><br /><sub><b>kickbk</b></sub></a><br /><a href="https://github.com/gorhom/react-native-bottom-sheet/issues?q=author%3Akickbk" title="Bug reports">🐛</a> <a href="https://github.com/gorhom/react-native-bottom-sheet/commits?author=kickbk" title="Tests">⚠️</a></td>
   </tr>
 </table>
