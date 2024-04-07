@@ -6,7 +6,7 @@ import { Text, View } from 'react-native'
 const Demo = () => {
 
   const prerequisites =  [
-    false, false, false
+    false, true, false
   ]
 
   return (

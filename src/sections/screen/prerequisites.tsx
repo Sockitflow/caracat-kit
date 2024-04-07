@@ -3,28 +3,41 @@ import Overlay from './prerequisites/overlay';
 import { Button } from '../../components/button';
 import { BottomSheetModal } from 'caracat-react-native-kitty';
 
-
 const Prerequisites = ({ children, prerequisites }) => {
-  const firstTruthyIndex = prerequisites.findIndex(
-    prerequisite => !!prerequisite
-  );
+const isPrerequisiteActive = (element) => element == true
+const activePrerequisiteIndex = prerequisites.findIndex(isPrerequisiteActive)
 
-const bottomSheetRef =  useRef<BottomSheetModal>(null);
+console.warn(activePrerequisiteIndex);
+
+
+  const bottomSheetRef = useRef<BottomSheetModal>(null);
 
   const handlePresentPress = useCallback(() => {
     bottomSheetRef.current!.present();
   }, []);
 
-React.useEffect(() => {
- handlePresentPress()
-}, [firstTruthyIndex])
+    const handleDismissPress = useCallback(() => {
+    bottomSheetRef.current!.dismiss();
+  }, []);
+  const handleClosePress = useCallback(() => {
+    bottomSheetRef.current?.close();
+  }, []);
 
+
+  React.useEffect(() => {
+    if (activePrerequisiteIndex >= 0) {
+    handlePresentPress();
+    } else {
+    handleDismissPress()
+    }
+  }, [activePrerequisiteIndex]);
 
   return (
     <>
-      <Button label="Present" onPress={handlePresentPress} />
+      {/* <Button label="Present" onPress={handlePresentPress} /> */}
       <Overlay ref={bottomSheetRef}>
-        <>{children[firstTruthyIndex !== -1 && firstTruthyIndex] ?? null}</>
+{children[activePrerequisiteIndex]}
+        {/* so if the first prereq is active show its place in the portal */}
       </Overlay>
     </>
   );

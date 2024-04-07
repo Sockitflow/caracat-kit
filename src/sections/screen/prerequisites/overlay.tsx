@@ -7,7 +7,6 @@ import {
   BottomSheetFooter,
 } from 'caracat-react-native-kitty';
 import { Button } from '../../../components/button';
-import { withModalProvider } from './withModalProvider';
 import { HeaderHandle } from './headerHandle';
 // import { createContactListMockData } from '../../../utilities/createMockData';
 import { ContactItem } from '../../../components/item/contactItem';
@@ -62,10 +61,10 @@ const bottomSheetRef =  ref ?? useRef<BottomSheetModal>(null);
   );
 
   return (
-    <View style={styles.container}>
-      <Button label="Present" onPress={handlePresentPress} />
-      <Button label="Dismiss" onPress={handleDismissPress} />
-      <Button label="Close" onPress={handleClosePress} />
+    // <View style={styles.container}>
+      // {/* <Button label="Present" onPress={handlePresentPress} />
+      // <Button label="Dismiss" onPress={handleDismissPress} />
+      // <Button label="Close" onPress={handleClosePress} /> */}
       <BottomSheetModal
         ref={bottomSheetRef}
         enableDynamicSizing={true}
@@ -86,7 +85,7 @@ const bottomSheetRef =  ref ?? useRef<BottomSheetModal>(null);
           {children}
         </BottomSheetView>
       </BottomSheetModal>
-    </View>
+    // </View>
   );
 });
 const styles = StyleSheet.create({
