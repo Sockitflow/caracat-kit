@@ -13,6 +13,7 @@ import {
   Image,
 } from 'react-native';
 import { Fragment } from 'react';
+import bottomNavigation from './bottom-navigation';
 // import FeatherIcon from 'react-native-vector-icons/Feather';
 
 // prerequisites can be a array of conditions and then screen.prereq can be a component that takes an array of children and each child is a place in the array
@@ -182,5 +183,7 @@ Screen.footer = Footer;
 Screen.header = Header;
 Screen.content = Content;
 Screen.prerequisites = Prerequisites;
+Screen.bottomNavigation = bottomNavigation;
+
 
 export default Screen;

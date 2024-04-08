@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { HeaderWithMultipleActions, Screen } from 'caracat-react-native-kitty'
+import { BottomNavigation, HeaderWithMultipleActions, Screen } from 'caracat-react-native-kitty'
 import { Text, View } from 'react-native'
 
 const Demo = () => {
@@ -26,6 +26,9 @@ const Demo = () => {
 <View style={{width:400, height:400 , backgroundColor:"yellow"}}></View>
 <View style={{width:400, height:400 , backgroundColor:"green"}}></View>
 </Screen.prerequisites>
+<Screen.bottomNavigation>
+  <BottomNavigation/>
+</Screen.bottomNavigation>
 </Screen>
 {/* <Prerequisites/> */}
 </>
