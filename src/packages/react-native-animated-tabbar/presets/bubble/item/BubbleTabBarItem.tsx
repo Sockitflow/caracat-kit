@@ -3,7 +3,7 @@ import { View, Text, LayoutChangeEvent } from 'react-native';
 import Animated from 'react-native-reanimated';
 import { interpolateColor, useValue } from 'react-native-redash';
 // @ts-ignore 😞
-import isEqual from '../../../../../lodashIsEqual'
+import isEqual from '../../../../lodashIsEqual'
 import { interpolate } from '../../../utilities';
 import type { BubbleTabBarItemProps } from '../types';
 import { styles } from './styles';

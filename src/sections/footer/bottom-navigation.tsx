@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import AnimatedTabBar, {TabsConfig, BubbleTabBarItemConfig} from '../../packages/react-native-animated-tabbar/src';
+import AnimatedTabBar, {TabsConfig, BubbleTabBarItemConfig} from '../../packages/react-native-animated-tabbar';
 
 const tabs: TabsConfig<BubbleTabBarItemConfig> = {
   Home: {

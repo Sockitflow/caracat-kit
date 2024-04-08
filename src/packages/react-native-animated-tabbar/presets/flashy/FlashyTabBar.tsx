@@ -1,15 +1,8 @@
-import React, { useMemo, memo, useState } from 'react';
-import {
-  View,
-  ViewStyle,
-  StyleProp,
-  LayoutRectangle,
-  LayoutChangeEvent,
-} from 'react-native';
+import React, { useMemo, memo } from 'react';
+import { View, StyleProp, ViewStyle } from 'react-native';
 // @ts-ignore 😞
-import isEqual from '../../../../lodashIsEqual'
-import MaterialTabBarItem from './item';
-import MaterialTabBarRipple from './ripple';
+import isEqual from '../../../lodashIsEqual'
+import FlashyTabBarItem from './item';
 import RawButton from '../../components/rawButton';
 import {
   DEFAULT_ITEM_ANIMATION_DURATION,
@@ -19,28 +12,21 @@ import {
   DEFAULT_ITEM_ICON_SIZE,
   DEFAULT_ITEM_LAYOUT_DIRECTION,
   DEFAULT_ITEM_CONTAINER_WIDTH,
-  DEFAULT_CONFIG_ANIMATION,
-  DEFAULT_CONFIG_INACTIVE_OPACITY,
-  DEFAULT_CONFIG_INACTIVE_SCALE,
 } from './constants';
 import {
   useTabBarItemFocusTransition,
   useTabBarItemSpacing,
-  useStableCallback,
 } from '../../hooks';
 import { noop } from '../../utilities';
 import type { TabBarViewProps } from '../../types';
-import type { MaterialTabBarConfig, MaterialTabBarItemConfig } from './types';
+import type { FlashyTabBarConfig, FlashyTabBarItemConfig } from './types';
 import { styles } from './styles';
 
-const MaterialTabBarComponent = ({
+const FlashyTabBarComponent = ({
   selectedIndex,
   tabs,
   duration = DEFAULT_ITEM_ANIMATION_DURATION,
   easing = DEFAULT_ITEM_ANIMATION_EASING,
-  animation = DEFAULT_CONFIG_ANIMATION,
-  inactiveOpacity = DEFAULT_CONFIG_INACTIVE_OPACITY,
-  inactiveScale = DEFAULT_CONFIG_INACTIVE_SCALE,
   itemInnerSpace,
   itemOuterSpace,
   itemContainerWidth = DEFAULT_ITEM_CONTAINER_WIDTH,
@@ -49,15 +35,8 @@ const MaterialTabBarComponent = ({
   style: containerStyleOverride,
   onLongPress = noop,
   animatedOnChange,
-}: TabBarViewProps<MaterialTabBarConfig, MaterialTabBarItemConfig>) => {
+}: TabBarViewProps<FlashyTabBarConfig, FlashyTabBarItemConfig>) => {
   //#region variables
-  const [containerLayout, setContainerLayout] = useState({
-    width: 0,
-    height: 0,
-  });
-  const [tabsPosition, setTabsPosition] = useState<{
-    [key: number]: LayoutRectangle;
-  }>([]);
   const animatedFocusValues = useMemo(
     () =>
       tabs.map((_, index) =>
@@ -80,18 +59,15 @@ const MaterialTabBarComponent = ({
   );
   //#endregion
 
-  //#region Styles
+  //#region styles
   const containerStyle = useMemo<StyleProp<ViewStyle>>(
     () => [
       styles.container,
       containerStyleOverride,
       {
         flexDirection: isRTL ? 'row-reverse' : 'row',
-        // @ts-ignore
-        backgroundColor: tabs[selectedIndex._value ?? 0].ripple.color,
       },
     ],
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     [containerStyleOverride, isRTL]
   );
   const rawButtonStyle = useMemo(
@@ -100,54 +76,23 @@ const MaterialTabBarComponent = ({
   );
   //#endregion
 
-  //#region callbacks
-  const handleTabItemLayout = useStableCallback((index, position) => {
-    setTabsPosition(state => {
-      return { ...state, [index]: position };
-    });
-  });
-  const handleContainerLayout = useStableCallback(
-    ({
-      nativeEvent: {
-        layout: { height, width },
-      },
-    }: LayoutChangeEvent) => {
-      setContainerLayout({ height, width });
-    }
-  );
-  //#endregion
-
   // render
   return (
-    <View style={containerStyle} onLayout={handleContainerLayout}>
-      {Object.keys(tabsPosition).length === tabs.length ? (
-        <MaterialTabBarRipple
-          tabs={tabs}
-          tabItemPositions={Object.values(tabsPosition)}
-          selectedIndex={selectedIndex}
-          animatedFocusValues={animatedFocusValues}
-          width={containerLayout.width}
-          height={containerLayout.height}
-        />
-      ) : null}
+    <View style={containerStyle}>
       {tabs.map(({ key, title, ...configs }, index) => {
         return (
           <RawButton
             key={key}
             index={index}
             selectedIndex={selectedIndex}
-            accessibilityLabel={title}
             style={rawButtonStyle}
+            accessibilityLabel={title}
             animatedOnChange={animatedOnChange}
-            onLayout={handleTabItemLayout}
             onLongPress={onLongPress}
           >
-            <MaterialTabBarItem
+            <FlashyTabBarItem
               index={index}
               animatedFocus={animatedFocusValues[index]}
-              animation={animation}
-              inactiveOpacity={inactiveOpacity}
-              inactiveScale={inactiveScale}
               label={title}
               spacing={tabBarItemSpacing}
               itemContainerWidth={itemContainerWidth}
@@ -162,6 +107,8 @@ const MaterialTabBarComponent = ({
   );
 };
 
-const MaterialTabBar = memo(MaterialTabBarComponent, isEqual);
+const FlashyTabBar = memo(FlashyTabBarComponent, (prevProps, nextProps) =>
+  isEqual(prevProps, nextProps)
+);
 
-export default MaterialTabBar;
+export default FlashyTabBar;

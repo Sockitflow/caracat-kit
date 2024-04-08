@@ -1,7 +1,7 @@
 import React, { useMemo, memo } from 'react';
 import { View, ViewStyle, StyleProp } from 'react-native';
 // @ts-ignore 😞
-import isEqual from '../../../../lodashIsEqual'
+import isEqual from '../../../lodashIsEqual'
 import BubbleTabBarItem from './item';
 import RawButton from '../../components/rawButton';
 import {
