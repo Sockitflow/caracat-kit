@@ -10,7 +10,6 @@ const author = {
   url: 'https://gorhom.dev',
 };
 
-
 interface AppProps {
   screens?: any[];
 }
