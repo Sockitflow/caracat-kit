@@ -4,11 +4,10 @@ import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import * as Font from 'expo-font';
 
-let customFonts = {
-  // 'Inter-Black': require('./assets/fonts/Inter-Black.otf'),
-  'Inter-SemiBoldItalic':
-    'https://cdn.rawgit.com/h-ibaldo/Raleway_Fixed_Numerals/master/font/rawline-100.ttf',
-};
+ let customFonts = {
+   'Inter-SemiBoldItalic':
+     'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/fonts-inter/Inter-Black.otf.md',
+ };
 
 export default class App extends React.Component {
   state = {
@@ -16,7 +15,7 @@ export default class App extends React.Component {
   };
 
   async _loadFontsAsync() {
-    await Font.loadAsync(customFonts);
+    await Font.loadAsync(await fetchFonts());
     this.setState({ fontsLoaded: true });
   }
 
