@@ -54,7 +54,6 @@
   },
   "dependencies": {
     "@gorhom/portal": "^1.0.14",
-    "@gorhom/showcase-template": "^3.0.2",
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/native-stack": "6.9.26",
     "expo": "~50.0.14",

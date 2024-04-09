@@ -38,7 +38,7 @@ import ChalkProvider from './provider';
  *
  * @overview-example CardStatuses
  */
-const Chalk = ({ children, style }) => {
+export const Chalk = ({ children, style }) => {
   //  this will have
   return (
     <ChalkProvider>
@@ -90,4 +90,3 @@ export const Heading = ({ children, style, ...rest }) => {
   const mergedStyle = { fontSize: 90, ...style };
   return <Chalk style={mergedStyle} {...rest}>{children}</Chalk>;
 };
-export default Chalk;

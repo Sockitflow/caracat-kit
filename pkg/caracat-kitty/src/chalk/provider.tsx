@@ -75,18 +75,8 @@ export default class ChalkProvider extends React.Component {
       return null;
     }
 
-    return (
-      // <View style={styles.container}>
-      //   <Text style={{ fontFamily: 'Newake', fontSize: 30 }}>{this.props.children}</Text>
-      //   <Text style={{ fontFamily: 'Inter-SemiBoldItalic', fontSize: 30 }}>
-      //    {this.props.children}
-      //   </Text>
-      //   <Text style={{ fontSize: 30 }}>Platform Default</Text>
-      // </View>
-      <>
-      {this.props.children}
-      </>
-    );
+    return this.props.children
+
   }
 }
 

@@ -1,2 +1,1 @@
-export { default as ChalkProvider } from './provider';
-export { default as Chalk, Heading } from './chalk';
+export { default as Divider } from './divider';

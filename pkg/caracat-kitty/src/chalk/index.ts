@@ -1,2 +1,2 @@
 export { default as ChalkProvider } from './provider';
-export { default as Chalk, Heading } from './chalk';
+export { Chalk, Heading } from './chalk';

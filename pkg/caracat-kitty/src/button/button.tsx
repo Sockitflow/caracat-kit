@@ -1,7 +1,15 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import {
+  Platform,
+  StyleSheet,
+  TouchableOpacity,
+  TouchableNativeFeedback,
+} from 'react-native';
 import { Heading } from '../chalk';
 import { darkenColor } from '../../packages/darken-color';
+
+const Touchable =
+  Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback;
 
 type ButtonType = {
   label?: string;
@@ -51,7 +59,6 @@ export default function Button({
   disabled = false,
   active = false,
 }: ButtonType) {
-
   const buttonStyles = {
     base: {
       width: '50%',
@@ -91,10 +98,10 @@ export default function Button({
   });
 
   return (
-    <View style={styles.button}>
+    <Touchable style={styles.button}>
       <Heading adjustsFontSizeToFit={true} style={styles.label}>
         {label}
       </Heading>
-    </View>
+    </Touchable>
   );
 }
