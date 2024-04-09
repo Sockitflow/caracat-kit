@@ -1,14 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Heading } from '../chalk';
-import { darkenColor } from '../../packages/darken-color';
-
-type ButtonType = {
-  label?: string;
-  color?: string;
-  disabled?: boolean;
-  active?: boolean;
-};
+import { StyleSheet, Text, View } from 'react-native';
 
 /**
  * Cards contain content and actions about a single subject.
@@ -45,56 +36,23 @@ type ButtonType = {
  *
  * @overview-example CardStatuses
  */
-export default function Button({
-  label,
-  color = '#ff8c52',
-  disabled = false,
-  active = false,
-}: ButtonType) {
+const Divider = () => (
+  <View style={styles.container}>
+    <Text style={styles.row}>React</Text>
+    <Text style={styles.row}>Native</Text>
+  </View>
+);
 
-  const buttonStyles = {
-    base: {
-      width: '50%',
-      backgroundColor: color,
-      borderWidth: 5,
-      borderColor: darkenColor(color, -10),
-      height: 50,
-      justifyContent: 'center',
-      alignItems: 'center',
-      overflow: 'hidden',
-      borderRadius: 20,
-    },
-    disabled: '',
-    active: '',
-  };
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 24,
+  },
+  divider: {
+    padding: 4,
+    borderBottomColor: 'red',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  },
+});
 
-  const labelStyles = {
-    base: {
-      fontSize: 30,
-      color: '#fff',
-    },
-    disabled: disabled && {
-      color: darkenColor(color, -30),
-    },
-    active: '',
-  };
-
-  const styles = StyleSheet.create({
-    label: {
-      ...labelStyles.base,
-      ...labelStyles.disabled,
-    },
-    button: {
-      ...buttonStyles.base,
-      ...buttonStyles.disabled,
-    },
-  });
-
-  return (
-    <View style={styles.button}>
-      <Heading adjustsFontSizeToFit={true} style={styles.label}>
-        {label}
-      </Heading>
-    </View>
-  );
-}
+export default Divider;

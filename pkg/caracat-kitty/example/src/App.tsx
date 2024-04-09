@@ -1,6 +1,4 @@
 import * as React from 'react';
-import { BlurView } from 'expo-blur';
-
 import { SafeAreaView } from 'react-native';
 import { Button } from 'react-native-caracat-kitty';
 

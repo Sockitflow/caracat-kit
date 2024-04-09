@@ -9,6 +9,8 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@gorhom/showcase-template": "^3.0.2",
+    "@shopify/flash-list": "1.6.3",
     "expo": "~50.0.14",
     "expo-asset": "~9.0.2",
     "expo-blur": "~12.9.2",
