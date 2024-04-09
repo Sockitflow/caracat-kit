@@ -1,23 +1,71 @@
+// export { default } from './src/App';
+
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import * as Font from 'expo-font';
-
-let customFonts = {
-  // 'Inter-Black': require('./assets/fonts/Inter-Black.otf'),
-  'Inter-SemiBoldItalic':
-    'https://github.com/h-ibaldo/Raleway_Fixed_Numerals/blob/master/font/rawline-100.ttf',
-};
 
 export default class ChalkProvider extends React.Component {
   state = {
     fontsLoaded: false,
   };
 
-  async _loadFontsAsync() {
-    await Font.loadAsync(customFonts);
-    this.setState({ fontsLoaded: true });
-  }
+  defaultInterFonts = {
+    'Inter-Black':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-Black.otf',
+    'Inter-BlackItalic':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-BlackItalic.otf',
+    'Inter-Bold':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-Bold.otf',
+    'Inter-BoldItalic':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-BoldItalic.otf',
+    'Inter-ExtraBold':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-ExtraBold.otf',
+    'Inter-ExtraBoldItalic':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-ExtraBoldItalic.otf',
+    'Inter-ExtraLight':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-ExtraLight.otf',
+    'Inter-ExtraLightItalic':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-ExtraLightItalic.otf',
+    'Inter-Italic':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-Italic.otf',
+    'Inter-Light':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-Light.otf',
+    'Inter-LightItalic':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-LightItalic.otf',
+    'Inter-Medium':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-Medium.otf',
+    'Inter-MediumItalic':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-MediumItalic.otf',
+    'Inter-Regular':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-Regular.otf',
+    'Inter-SemiBold':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-SemiBold.otf',
+    'Inter-SemiBoldItalic':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-SemiBoldItalic.otf',
+    'Inter-Thin':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-Thin.otf',
+    'Inter-ThinItalic':
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-inter/Inter-ThinItalic.otf',
+  };
 
+  defaultNewakeFonts = {
+    Newake:
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-newake/Newake.otf',
+  };
+
+  async _loadFontsAsync() {
+    try {
+      const defaultFonts = {
+        ...this.props.fonts,
+        ...this.defaultInterFonts,
+        ...this.defaultNewakeFonts,
+      };
+      await Font.loadAsync(defaultFonts);
+      this.setState({ fontsLoaded: true });
+    } catch (error) {
+      console.error('Error loading fonts', error);
+    }
+  }
   componentDidMount() {
     this._loadFontsAsync();
   }
@@ -28,16 +76,16 @@ export default class ChalkProvider extends React.Component {
     }
 
     return (
-      <>{this.props.children}</>
       // <View style={styles.container}>
-      //   <Text style={{ fontFamily: 'Inter-Black', fontSize: 30 }}>
-      //     Inter Black
-      //   </Text>
+      //   <Text style={{ fontFamily: 'Newake', fontSize: 30 }}>{this.props.children}</Text>
       //   <Text style={{ fontFamily: 'Inter-SemiBoldItalic', fontSize: 30 }}>
-      //     Inter SemiBoldItalic
+      //    {this.props.children}
       //   </Text>
       //   <Text style={{ fontSize: 30 }}>Platform Default</Text>
       // </View>
+      <>
+      {this.props.children}
+      </>
     );
   }
 }

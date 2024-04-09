@@ -1,29 +1,13 @@
 import * as React from 'react';
+import { BlurView } from 'expo-blur';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { ChalkProvider, Heading } from 'react-native-caracat-kitty';
+import { SafeAreaView } from 'react-native';
+import { Button } from 'react-native-caracat-kitty';
 
 export default function App() {
-  // const [result, setResult] = React.useState<number | undefined>();
-
-  // React.useEffect(() => {
-  //   multiply(3, 7).then(setResult);
-  // }, []);
-
   return (
-      <Heading>Whats up</Heading>
+    <SafeAreaView style={{ flex: 1 }}>
+      <Button label={'continue'} />
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
-});
