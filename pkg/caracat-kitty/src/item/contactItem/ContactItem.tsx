@@ -1,13 +1,6 @@
 import React, { memo, useMemo } from 'react';
-import {
-  Text,
-  StyleSheet,
-  View,
-  TextStyle,
-  ViewStyle,
-  TouchableOpacity,
-} from 'react-native';
-// import { TouchableOpacity } from 'caracat-react-native-kitty';
+import { Text, StyleSheet, View, TextStyle, ViewStyle } from 'react-native';
+import { TouchableOpacity } from '@gorhom/bottom-sheet';
 
 interface ContactItemProps {
   title: string;

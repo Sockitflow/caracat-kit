@@ -1,12 +1,8 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
 import { KitchenSink } from 'react-native-caracat-kitty';
+import { description, version, name } from '../../package.json';
 
-const DemoScreen = () => (
-  <View>
-    <Text>Demo Screen</Text>
-  </View>
-);
+const DemoScreen = () => <></>;
 
 const screens = [
   {
@@ -47,7 +43,14 @@ const screens = [
 ];
 
 export default function App() {
-  return <KitchenSink screens={screens} />;
+  return (
+    <KitchenSink
+      version={version}
+      description={description}
+      screens={screens}
+      name={name}
+    />
+  );
 }
 
 // <SafeAreaView style={{ flex: 1 }}>

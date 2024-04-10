@@ -1,19 +1,17 @@
 // In App.js in a new project
 
 import React from 'react';
-import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Heading } from '../../src/chalk';
 import Sink from './src/contents';
 
 const Stack = createNativeStackNavigator();
 
-const KitchenSink = (props) => {
+const KitchenSink = ({ screens, ...rest }) => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Sink">
-        {props.screens.map((item) =>
+        {screens.map((item) =>
           item.data.map((item) => (
             <Stack.Screen
               key={item.slug}
@@ -38,7 +36,7 @@ const KitchenSink = (props) => {
           }}
           name="Sink"
         >
-          {(props) => <Sink {...props} />}
+          {(props) => <Sink {...rest} />}
         </Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
