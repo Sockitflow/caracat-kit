@@ -7,11 +7,11 @@ import Sink from './src/contents';
 
 const Stack = createNativeStackNavigator();
 
-const KitchenSink = ({ screens, ...rest }) => {
+const KitchenSink = (props) => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Sink">
-        {screens.map((item) =>
+        {props.screens.map((item) =>
           item.data.map((item) => (
             <Stack.Screen
               key={item.slug}
@@ -36,7 +36,7 @@ const KitchenSink = ({ screens, ...rest }) => {
           }}
           name="Sink"
         >
-          {(props) => <Sink {...rest} />}
+          {(screen) => <Sink {...screen} {...props} />}
         </Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>

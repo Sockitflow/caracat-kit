@@ -1,22 +1,8 @@
 import React from 'react';
-import {
-  Platform,
-  StyleSheet,
-  TouchableOpacity,
-  TouchableNativeFeedback,
-} from 'react-native';
+import { Pressable, StyleSheet, View } from 'react-native';
 import { Heading } from '../chalk';
 import { darkenColor } from '../../packages/darken-color';
-
-const Touchable =
-  Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback;
-
-type ButtonType = {
-  label?: string;
-  color?: string;
-  disabled?: boolean;
-  active?: boolean;
-};
+import Animated, { useSharedValue, withSpring } from 'react-native-reanimated';
 
 /**
  * Cards contain content and actions about a single subject.
@@ -55,53 +41,93 @@ type ButtonType = {
  */
 export default function Button({
   label,
-  color = '#ff8c52',
+  color = '#d152ff',
   disabled = false,
+  style = {},
   active = false,
-}: ButtonType) {
-  const buttonStyles = {
+  animated = false,
+  onPress = () => {
+    return;
+  },
+  onPressIn = () => {
+    return;
+  },
+  onPressOut = () => {
+    return;
+  },
+  ...rest
+}: ButtonType): React.JSX.Element {
+  const buttonStyles = StyleSheet.create({
+    container: {
+      alignItems: 'center',
+      ...style,
+    },
     base: {
-      width: '50%',
+      shadowColor: '#000000',
+      shadowOffset: {
+        width: 0,
+        height: 3,
+      },
+      shadowOpacity: 0.17,
+      shadowRadius: 3.05,
+      elevation: 4,
+      //
       backgroundColor: color,
       borderWidth: 5,
-      borderColor: darkenColor(color, -10),
+      // borderColor: darkenColor(color, -10),
       height: 50,
+      paddingHorizontal: 10,
       justifyContent: 'center',
       alignItems: 'center',
       overflow: 'hidden',
       borderRadius: 20,
     },
-    disabled: '',
-    active: '',
-  };
+  });
 
-  const labelStyles = {
+  const labelStyles = StyleSheet.create({
     base: {
       fontSize: 30,
       color: '#fff',
     },
-    disabled: disabled && {
-      color: darkenColor(color, -30),
-    },
-    active: '',
-  };
-
-  const styles = StyleSheet.create({
-    label: {
-      ...labelStyles.base,
-      ...labelStyles.disabled,
-    },
-    button: {
-      ...buttonStyles.base,
-      ...buttonStyles.disabled,
+    disabled: {
+      color: disabled ? darkenColor(color, -30) : '#fff',
     },
   });
 
+  const borderColor = useSharedValue(darkenColor(color, -25));
+
+  const _onPressIn = () => {
+    borderColor.value = withSpring(darkenColor(color, -10));
+    onPressIn();
+  };
+
+  const _onPressOut = () => {
+    borderColor.value = withSpring(darkenColor(color, -25));
+    onPressOut();
+    onPress();
+  };
+
   return (
-    <Touchable style={styles.button}>
-      <Heading adjustsFontSizeToFit={true} style={styles.label}>
-        {label}
-      </Heading>
-    </Touchable>
+    <View style={buttonStyles.container} {...rest}>
+      <Pressable onPressIn={_onPressIn} onPressOut={_onPressOut}>
+        <Animated.View
+          style={[
+            buttonStyles.base,
+            {
+              borderColor,
+            },
+          ]}
+        >
+          <Heading style={labelStyles.base}>{label}</Heading>
+        </Animated.View>
+      </Pressable>
+    </View>
   );
 }
+
+type ButtonType = {
+  label?: string;
+  color?: string;
+  disabled?: boolean;
+  active?: boolean;
+};

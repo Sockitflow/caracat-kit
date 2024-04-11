@@ -1,7 +1,6 @@
 // export { default } from './src/App';
 
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
 import * as Font from 'expo-font';
 
 export default class ChalkProvider extends React.Component {
@@ -53,12 +52,18 @@ export default class ChalkProvider extends React.Component {
       'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-newake/Newake.otf',
   };
 
+  defaultManropeFonts = {
+    Manrope:
+      'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-manrope/Manrope.ttf',
+  };
+
   async _loadFontsAsync() {
     try {
       const defaultFonts = {
         ...this.props.fonts,
         ...this.defaultInterFonts,
         ...this.defaultNewakeFonts,
+        ...this.defaultManropeFonts,
       };
       await Font.loadAsync(defaultFonts);
       this.setState({ fontsLoaded: true });
@@ -75,15 +80,6 @@ export default class ChalkProvider extends React.Component {
       return null;
     }
 
-    return this.props.children
-
+    return this.props.children;
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});

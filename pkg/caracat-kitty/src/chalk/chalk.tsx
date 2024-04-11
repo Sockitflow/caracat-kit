@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 import ChalkProvider from './provider';
-
+import Animated from 'react-native-reanimated';
 
 /**
  * Cards contain content and actions about a single subject.
@@ -38,19 +38,17 @@ import ChalkProvider from './provider';
  *
  * @overview-example CardStatuses
  */
-export const Chalk = ({ children, style }) => {
-  //  this will have
+
+export const Chalk = ({ children, animated, ...rest }) => {
+  const ChalkBase = animated ? Animated.Text : Text;
+
   return (
     <ChalkProvider>
-      <Text style={{ fontFamily: 'Newake', fontSize: 30, ...style }}>
-        {children}
-      </Text>
+      <ChalkBase {...rest}>{children}</ChalkBase>
     </ChalkProvider>
   );
 };
 
-
-
 /**
  * Cards contain content and actions about a single subject.
  *
@@ -86,7 +84,80 @@ export const Chalk = ({ children, style }) => {
  *
  * @overview-example CardStatuses
  */
-export const Heading = ({ children, style, ...rest }) => {
-  const mergedStyle = { fontSize: 90, ...style };
-  return <Chalk style={mergedStyle} {...rest}>{children}</Chalk>;
+export const Heading = ({ size = 90, children, style, ...rest }) => {
+  const mergedStyle = {
+    fontFamily: 'Newake',
+    fontSize: size,
+    ...style,
+  };
+
+  return (
+    <Chalk style={mergedStyle} {...rest}>
+      {children}
+    </Chalk>
+  );
+};
+
+export const SubHeading = ({ size = 30, children, style, ...rest }) => {
+  const mergedStyle = {
+    fontFamily: 'Inter-Light',
+    fontWeight: 100,
+    fontSize: size,
+    ...style,
+  };
+
+  return (
+    <Chalk style={mergedStyle} {...rest}>
+      {children}
+    </Chalk>
+  );
+};
+
+export const Subtitle = ({ size = 20, children, style, ...rest }) => {
+  const mergedStyle = {
+    fontFamily: 'Inter-Bold',
+    fontStyle: 'normal',
+    letterSpacing: 0,
+    lineHeight: 24,
+    // color: '#FFFFFF',
+    fontSize: size,
+    ...style,
+  };
+  return (
+    <Chalk style={mergedStyle} {...rest}>
+      {children.toUpperCase()}
+    </Chalk>
+  );
+};
+
+export const Paragraph = ({ size = 16, children, style, ...rest }) => {
+  const mergedStyle = {
+    fontFamily: 'Inter-Medium',
+    fontSize: size,
+    ...style,
+  };
+  return (
+    <Chalk style={mergedStyle} {...rest}>
+      {children}
+    </Chalk>
+  );
+};
+
+export const ChipLabel = ({
+  color = 'black',
+  size = 16,
+  children,
+  style,
+  ...rest
+}) => {
+  const mergedStyle = {
+    fontFamily: 'Inter-SemiBold',
+    fontSize: size,
+    ...style,
+  };
+  return (
+    <Chalk style={mergedStyle} {...rest}>
+      {children}
+    </Chalk>
+  );
 };

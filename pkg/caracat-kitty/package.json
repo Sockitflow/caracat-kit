@@ -1,7 +1,7 @@
 {
   "name": "react-native-caracat-kitty",
   "version": "0.1.0",
-  "description": "hi",
+  "description": "Enhance your React Native experience with this intuitive UI toolkit, designed to streamline development and provide a seamless user interface.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",

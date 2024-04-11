@@ -1,6 +1,8 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import MaskedView from '@react-native-masked-view/masked-view';
+import { ChipLabel } from '../chalk';
+import { darkenColor } from '../../packages';
 
 /**
  * Cards contain content and actions about a single subject.
@@ -37,12 +39,21 @@ import MaskedView from '@react-native-masked-view/masked-view';
  *
  * @overview-example CardStatuses
  */
-const Chip = (props) => {
-  const { label } = props;
+const Chip = ({ color = 'black', children, ...rest }) => {
   //  we can use a portal to add specifics to the label of the chip
   return (
-    <View {...props} stye={{ borderRadius: 20 }}>
-      <Text>{label}</Text>
+    <View style={{ flex: 1, alignItems: 'center' }}>
+      <View
+        {...rest}
+        style={{
+          borderRadius: 20,
+          backgroundColor: color,
+          padding: 5,
+          width: 'auto',
+        }}
+      >
+        <ChipLabel style={{ color: 'white' }}>{children}</ChipLabel>
+      </View>
     </View>
   );
 };

@@ -1,41 +1,32 @@
 import * as React from 'react';
 import { KitchenSink } from 'react-native-caracat-kitty';
 import { description, version, name } from '../../package.json';
+import 张伟 from '../screens/button/张伟';
 
 const DemoScreen = () => <></>;
 
 const screens = [
   {
-    title: 'Group 1',
+    title: 'Button',
     data: [
       {
-        name: 'Default',
-        slug: 'default',
-        getScreen: () => DemoScreen,
-      },
-      {
-        name: 'Example A',
-        slug: 'example-a',
-        getScreen: () => DemoScreen,
-      },
-      {
-        name: 'Example B',
-        slug: 'example-b',
-        getScreen: () => DemoScreen,
+        name: '张伟',
+        slug: 'button-张伟',
+        getScreen: () => 张伟,
       },
     ],
   },
   {
-    title: 'Group 2',
+    title: 'Card',
     data: [
       {
-        name: 'Example C',
-        slug: 'example-c',
+        name: '李娜',
+        slug: 'card-李娜',
         getScreen: () => DemoScreen,
       },
       {
-        name: 'Example D',
-        slug: 'example-d',
+        name: '王涛',
+        slug: 'card-王涛',
         getScreen: () => DemoScreen,
       },
     ],
