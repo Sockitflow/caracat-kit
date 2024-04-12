@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
-import { Heading } from '../chalk';
-import { darkenColor } from '../../packages/darken-color';
+import { Heading } from '../../../chalk';
+import { darkenColor } from '../../../../packages/darken-color';
 import Animated, { useSharedValue, withSpring } from 'react-native-reanimated';
 
 /**

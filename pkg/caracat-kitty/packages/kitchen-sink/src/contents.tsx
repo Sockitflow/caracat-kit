@@ -1,10 +1,9 @@
 import React from 'react';
-import { Screen } from '../../../src/sections';
+import { Screen, Spacer } from '../../../src/sections';
 import { Chip } from '../../../src/chip';
 import { Heading, Paragraph, SubHeading, Subtitle } from '../../../src/chalk';
 import { Stack, XStack, YStack } from '../../../src/stack';
-import { Button } from '../../../src/button';
-import { View } from 'react-native';
+import { Button$1 as Button } from '../../../src/button';
 
 const Sink = ({ version, description, name, icon, screens, navigation }) => {
   return (
@@ -14,10 +13,12 @@ const Sink = ({ version, description, name, icon, screens, navigation }) => {
         <Stack spaceX={1}>
           <YStack space={1}>
             <Chip>VERSION {version}</Chip>
-            <Heading>{name}</Heading>
+            <Heading size={45}>{name}</Heading>
             <XStack>
               {icon}
-              <Paragraph style={{ color: 'grey' }}>{description}</Paragraph>
+              <Paragraph style={{ fontWeight: 600, color: 'grey' }}>
+                {description}
+              </Paragraph>
             </XStack>
           </YStack>
         </Stack>
@@ -55,9 +56,7 @@ const Sink = ({ version, description, name, icon, screens, navigation }) => {
           </>
         </Stack>
       </Screen.content>
-      {/* <Screen.footer>
-        <Text>Sink {version}</Text>
-      </Screen.footer> */}
+      <Screen.footer></Screen.footer>
     </Screen>
   );
 };

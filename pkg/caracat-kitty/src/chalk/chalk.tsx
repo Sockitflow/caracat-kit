@@ -132,7 +132,8 @@ export const Subtitle = ({ size = 20, children, style, ...rest }) => {
 
 export const Paragraph = ({ size = 16, children, style, ...rest }) => {
   const mergedStyle = {
-    fontFamily: 'Inter-Medium',
+    fontFamily: 'Manrope',
+    fontWeight: 600,
     fontSize: size,
     ...style,
   };
