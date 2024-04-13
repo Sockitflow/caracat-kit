@@ -92,17 +92,34 @@
     "@types/react": "^18.2.44"
   },
   "peerDependencies": {
+    "@gorhom/bottom-sheet": "^4.6.1",
+    "@gorhom/showcase-template": "^3.0.2",
+    "@shopify/flash-list": "1.6.3",
+    "expo": "~50.0.14",
+    "expo-asset": "~9.0.2",
+    "expo-blur": "~12.9.2",
+    "expo-font": "~11.10.3",
+    "expo-splash-screen": "~0.26.4",
+    "expo-status-bar": "~1.11.1",
     "react": "*",
-    "react-native": "*"
+    "react-dom": "18.2.0",
+    "react-native": "*",
+    "react-native-gesture-handler": "~2.14.0",
+    "react-native-safe-area": "^0.5.1",
+    "react-native-web": "~0.19.6"
   },
   "workspaces": [
-    "example"
+    "example",
+    "yarbah",
+    "carecat"
   ],
   "packageManager": "yarn@3.6.1",
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [
       "<rootDir>/example/node_modules",
+      "<rootDir>/yarbah/node_modules",
+      "<rootDir>/carecat/node_modules",
       "<rootDir>/lib/"
     ]
   },

@@ -1,11 +1,12 @@
 // export { default } from './src/App';
 
 import React from 'react';
+import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 
 export default class ChalkProvider extends React.Component {
   state = {
-    fontsLoaded: false,
+    // fontsLoaded: false,
   };
 
   defaultInterFonts = {
@@ -57,6 +58,10 @@ export default class ChalkProvider extends React.Component {
       'https://cdn.jsdelivr.net/gh/hossam1231/caracat-react-native-kitty@main/fonts/font-manrope/Manrope.ttf',
   };
 
+  async _preventSplashHiding() {
+    await SplashScreen.preventAutoHideAsync();
+  }
+
   async _loadFontsAsync() {
     try {
       const defaultFonts = {
@@ -66,19 +71,22 @@ export default class ChalkProvider extends React.Component {
         ...this.defaultManropeFonts,
       };
       await Font.loadAsync(defaultFonts);
-      this.setState({ fontsLoaded: true });
+      await SplashScreen.hideAsync();
+      // this.setState({ fontsLoaded: true });
     } catch (error) {
       console.error('Error loading fonts', error);
     }
   }
+
   componentDidMount() {
+    this._preventSplashHiding();
     this._loadFontsAsync();
   }
 
   render() {
-    if (!this.state.fontsLoaded) {
-      return null;
-    }
+    // if (!this.state.fontsLoaded) {
+    //   return null;
+    // }
 
     return this.props.children;
   }

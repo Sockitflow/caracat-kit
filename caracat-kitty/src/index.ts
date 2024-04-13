@@ -5,3 +5,4 @@ export * from './sections';
 export * from './chalk';
 export * from './chip';
 export * from './button';
+export * from './stack';
